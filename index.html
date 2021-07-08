@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Olcademy Assignment</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyBKbbyCbfi1HUQOVQjyn5NUEH91VLe8DkE",
+            authDomain: "sample1-cfed4.firebaseapp.com",
+            projectId: "sample1-cfed4",
+            storageBucket: "sample1-cfed4.appspot.com",
+            messagingSenderId: "699723243586",
+            appId: "1:699723243586:web:68f736a8bc32255b0b8ddb",
+            measurementId: "G-63ERRMBQSH"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(config);
+    </script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="main_page" class="main_page">
+        <h3>Olcademy Assignment</h3>
+        <button onclick="login()">Log In</button>
+        <br>
+        <button onclick="signup()">Sign Up</button>
+
+    </div>
+    <div id="login_page" class="login_page">
+        <h3>Log In</h3>
+        <input type="email" placeholder="Email..." id="email_field_li" />
+        <input type="password" placeholder="Password..." id="password_field_li" />
+
+        <button id="button" onclick="login_click()">Log In</button>
+        <br>
+        <button onclick="back()">Back</button>
+
+    </div>
+    <div id="signup_page" class="signup_page">
+        <h3> Sign UP</h3>
+        <input type="text" placeholder="Full Name.." id="name">
+        <input type="email" placeholder="Email..." id="email_field_su" />
+        <input type="password" placeholder="Password..." id="password_field_su" />
+        <input type="date" placeholder="Date" id="date_field_li" />
+        <label for="cars">Gender:</label>
+        <select id="cars" name="cars">
+            <option value="volvo">Male</option>
+            <option value="saab">Female</option>
+            <option value="saab">Other</option>
+        </select>
+        <br>
+        <br>
+        <button id="button" onclick="signup_click()">Sign Up</button>
+        <br>
+        <button onclick="back()">Back</button>
+    </div>
+    <div id="success" class="success">
+        <h3>Welcome Page</h3>
+        <h4>Login Successfully</h4>
+        <p id="user_para">Welcome User</p>
+        <br>
+        <button onclick="back()">Log Out</button>
+    </div>
+</body>
+
+</html>
